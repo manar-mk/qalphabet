@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app container-fluid" id="app">
+        <h1></h1>
+        <div class="jumbotron">
+            <h1 class="display-3">Qalphabet</h1>
+            <p class="lead">Введите текст для конвертации с кириллицы на латиницу</p>
+        </div>
+        <div class="field">
+            <label for="cyr">Кириллица</label>
+            <textarea @keyup="submit" id="cyr" v-model="cyr"></textarea>
+        </div>
+        <div class="field">
+            <label for="lat">Латиница</label>
+            <textarea id="lat">{{lat}}</textarea>
+        </div>
+    </div>
+    <script src="vue.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
