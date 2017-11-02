@@ -97,16 +97,22 @@ var app = new Vue({
   },
   methods: {
     submit: function() {
-      var result = this.cyr;
-        
+      var result = new String(this.cyr);
+
       for (var lettersComplexKey in this.lettersComplex) {
-        result = result.convert(lettersComplexKey.toString(), this.lettersComplex[lettersComplexKey]);
+        result = result.convert(
+          lettersComplexKey.toString(),
+          this.lettersComplex[lettersComplexKey]
+        );
       }
 
       for (var lettersSimpleKey in this.lettersSimple) {
-        result = result.convert(lettersSimpleKey.toString(), this.lettersSimple[lettersSimpleKey]);
+        result = result.convert(
+          lettersSimpleKey.toString(),
+          this.lettersSimple[lettersSimpleKey]
+        );
       }
-    
+
       this.lat = result;
     }
   }
