@@ -1,28 +1,35 @@
-textarea.form-control{
-    width: 100%;
-    display: block;
-    resize: vertical;
-    min-height: 100px;
-    color: #ffffff;
+textarea.form-control {
+  width: 100%;
+  display: block;
+  resize: vertical;
+  min-height: 100px;
+  color: #ffffff;
 }
-.app{
-    padding-top: 10px;
+.app {
+  padding-top: 10px;
 }
 .field {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 .cyr {
-    background:  #fd9d4f;
+  background: #fd9d4f;
 }
-.lat{
-    background: #4dc54f;
+.lat {
+  background: #4dc54f;
 }
-.jumbotron{
-    padding: 30px;
+.jumbotron {
+  padding: 30px;
 }
-.jumbotron p{
-    font-weight: 400;
+.jumbotron p {
+  font-weight: 400;
 }
-.jumbotron h1{
-    font-size: 45px;
+.jumbotron h1 {
+  font-size: 45px;
+}
+.btn {
+  font-size: 14px;
+}
+.btn .glyphicon {
+  font-size: 12px;
+  margin-right: 3px;
 }
