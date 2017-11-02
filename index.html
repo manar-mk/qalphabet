@@ -12,7 +12,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109152038-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'UA-109152038-1');
@@ -22,18 +22,21 @@
 
 <body>
     <div class="app container-fluid" id="app">
-        <h1></h1>
-        <div class="jumbotron">
-            <h1 class="display-3">Qalphabet</h1>
-            <p class="lead">Введите текст для конвертации с кириллицы на латиницу</p>
+        <div class="jumbotron text-center">
+            <h1>Qalphabet</h1>
+            <p class="lead">
+                <span class="text-warning">Қазақша мәтінді латин нұсқасына аудару</span>
+                <br>
+                <span class="text-success">Qazaqs'a ma'tіndі lati'n nusqasyna ay'dary'</span>
+            </p>
         </div>
         <div class="field">
-            <label for="cyr">Кириллица</label>
-            <textarea @keyup="submit" id="cyr" v-model="cyr"></textarea>
+            <label for="cyr" class="control-label text-warning">Кирил жазуы</label>
+            <textarea class="cyr form-control" @keyup="submit" id="cyr" v-model="cyr"></textarea>
         </div>
         <div class="field">
-            <label for="lat">Латиница</label>
-            <textarea id="lat" v-model="lat"></textarea>
+            <label for="lat" class="control-label text-success">Латин жазуы</label>
+            <textarea class="lat form-control" id="lat" v-model="lat"></textarea>
         </div>
     </div>
     <script src="js/vue.min.js"></script>
