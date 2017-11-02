@@ -1,17 +1,9 @@
 var app = new Vue({
   el: '#app',
   data: {
-    cyr: '',
+    cyr: 'Бұл жасқа келгенше жақсы өткіздік пе, жаман өткіздік пе, әйтеуір бірталай өмірімізді өткіздік: алыстық, жұлыстық, айтыстық, тартыстық - әурешілікті көре-көре келдік. Енді жер ортасы жасқа келдік: қажыдық, жалықтық; қылып жүрген ісіміздің баянсызын, байлаусызын көрдік, бәрі қоршылық екенін білдік. Ал, енді қалған өмірімізді қайтіп, не қылып өткіземіз? Соны таба алмай өзім де қайранмын.',
     lat: '',
-    lettersComplex: {
-      Я: "I'a",
-      я: "i'a",
-      Ю: "I'y'",
-      ю: "i'y'",
-      Ц: 'Ts',
-      ц: 'ts'
-    },
-    lettersSimple: {
+    letters: {
       А: 'A',
       а: 'a',
       Ә: "A'",
@@ -89,29 +81,29 @@ var app = new Vue({
       Щ: "s'",
       щ: "s'",
       ь: '',
-      ъ: ''
+      ъ: '',
+      Я: "I'a",
+      я: "i'a",
+      Ю: "I'y'",
+      ю: "i'y'",
+      Ц: 'Ts',
+      ц: 'ts'
     }
   },
   mounted: function() {
-    String.prototype.convert = function(prevValue, nextValue) {
-      return this.split(prevValue).join(nextValue);
+    String.prototype.convert = function(prev, next) {
+      return this.split(prev).join(next);
     };
+    this.submit();
   },
   methods: {
     submit: function() {
       var result = new String(this.cyr);
 
-      for (var lettersComplexKey in this.lettersComplex) {
+      for (var key in this.letters) {
         result = result.convert(
-          lettersComplexKey.toString(),
-          this.lettersComplex[lettersComplexKey]
-        );
-      }
-
-      for (var lettersSimpleKey in this.lettersSimple) {
-        result = result.convert(
-          lettersSimpleKey.toString(),
-          this.lettersSimple[lettersSimpleKey]
+          key.toString(),
+          this.letters[key]
         );
       }
 
