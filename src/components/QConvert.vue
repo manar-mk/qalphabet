@@ -28,11 +28,20 @@ export default {
   },
   methods: {
     submit: function() {
+      function capitalize(string) {
+        if (string.length > 1) {
+          return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+        } else {
+          return string.toUpperCase();
+        }
+      }
+
       this.lat = this.cyr
         .split('')
         .map(function(el) {
           if (qazLatyn.hasOwnProperty(el)) return qazLatyn[el];
-
+          else if (qazLatyn.hasOwnProperty(el.toLowerCase()))
+            return capitalize(qazLatyn[el.toLowerCase()]);
           return el;
         })
         .join('');
