@@ -3,9 +3,9 @@
     <div class="jumbotron text-center">
         <h1>QAlphabet</h1>
         <p class="lead">
-            <span class="text-warning">Қазақша мәтінді латын нұсқасына аудару</span>
+            <span class="text-muted">Қазақша мәтінді латын нұсқасына аудару</span>
             <br>
-            <span class="text-success">Qazaqs'a ma'tіndі latyn nusqasyna ay'dary'</span>
+            <span class="text-muted">Qazaqs'a ma'tіndі latyn nusqasyna ay'dary'</span>
         </p>
         <a target="_blank" class="btn btn-primary btn-lg" href="mailto:contact@qalphabet.kz">
             <i class="glyphicon glyphicon-envelope"></i>
@@ -27,7 +27,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .app {
   padding-top: 10px;
   padding-bottom: 30px;
@@ -36,7 +36,7 @@ export default {
   padding: 30px;
 }
 .jumbotron p {
-  font-weight: 400;
+  font-weight: 300;
 }
 .jumbotron h1 {
   font-size: 45px;
@@ -47,5 +47,11 @@ export default {
 .btn .glyphicon {
   font-size: 12px;
   margin-right: 3px;
+}
+.lead p{
+  font-weight: 300;
+}
+html, body{
+  height: 100%;
 }
 </style>

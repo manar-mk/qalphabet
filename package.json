@@ -10,7 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "qazlatyn-db": "^2.0.2",
+    "qazlatyn-db": "^3.0.1",
     "vue": "^2.5.2"
   },
   "devDependencies": {

@@ -1,14 +1,25 @@
 <template>
-  <div class="main">
-    <div class="field">
-        <label for="cyr" class="control-label text-warning">Кирил жазуы</label>
+<div class="container-fluid">
+  <div class="row align-items-stretch">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <label for="cyr" class="control-label">Кирил жазуы</label>
+        </div>
         <textarea class="cyr form-control" @keyup="submit" id="cyr" v-model="cyr"></textarea>
+      </div>
     </div>
-    <div class="field">
-        <label for="lat" class="control-label text-success">Латын жазуы</label>
-        <textarea class="lat form-control" id="lat" v-model="lat"></textarea>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <label for="lat" class="control-label">Latyn jazýy</label>
+        </div>
+          <textarea class="lat form-control" @keyup="submit" id="lat" v-model="lat"></textarea>
+      </div>
     </div>
   </div>
+</div>
+
 </template>
 
 <script>
@@ -52,20 +63,29 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.card{
+  height: 100%;
+}
+label{
+  margin-bottom: 0;
+  font-weight: bold;
+}
 textarea.form-control {
   width: 100%;
+  min-height: 50vh;
   display: block;
   resize: vertical;
-  min-height: 100px;
-  color: #ffffff;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  /* color: #ffffff; */
 }
-.field {
-  margin-top: 20px;
+textarea.form-control:focus {
+  box-shadow: none;
 }
-.cyr {
-  background: #fd9d4f;
+.container-fluid{
+  height: 100%;
 }
-.lat {
-  background: #4dc54f;
+@media (min-width: 576px) {
 }
 </style>
